@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fabricplayerviewer",
+  "version": "1.0.0",
+  "name": "Fabric Player Viewer Mod",
+  "description": "Exposes player data via HTTP for external tools.",
+  "authors": ["YourName"],
+  "contact": {
+    "sources": "https://github.com/yourusername/fabricplayerviewer"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["net.fabricmc.example.FabricPlayerViewerMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.20.4",
+    "fabric": "*"
+  }
+}
