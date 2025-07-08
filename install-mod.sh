@@ -22,7 +22,7 @@ else
 fi
 
 # Set destination directory for mods
-DEST_MODS_DIR="/opt/minecraft/mods"
+DEST_MODS_DIR="/home/ubuntu/Minecraft/mods"
 mkdir -p "$DEST_MODS_DIR"
 
 # Build the mod
