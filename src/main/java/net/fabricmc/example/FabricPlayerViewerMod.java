@@ -60,7 +60,8 @@ public class FabricPlayerViewerMod implements ModInitializer {
                 switch (subresource) {
                     case "inventory" -> {
                         JsonArray inventory = new JsonArray();
-                        for (ItemStack stack : player.getInventory().getMain()) {
+                        for (int i = 0; i < player.getInventory().size(); i++) {
+                            ItemStack stack = player.getInventory().getStack(i);
                             if (!stack.isEmpty()) {
                                 JsonObject item = new JsonObject();
                                 item.addProperty("item", stack.getItem().toString());
@@ -137,7 +138,8 @@ public class FabricPlayerViewerMod implements ModInitializer {
         json.add("position", position);
 
         JsonArray inventory = new JsonArray();
-        for (ItemStack stack : player.getInventory().getMain()) {
+        for (int i = 0; i < player.getInventory().size(); i++) {
+            ItemStack stack = player.getInventory().getStack(i);
             if (!stack.isEmpty()) {
                 JsonObject item = new JsonObject();
                 item.addProperty("item", stack.getItem().toString());
